@@ -10,12 +10,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          repository: ORGANIZACAO/REPOSITORIO_ORIGINAL  # Substitua pelo repositório original
+          repository: BookManagerOrganization/BookManagerAngularApp
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Sync with upstream
         run: |
-          git remote add upstream https://github.com/ORGANIZACAO/REPOSITORIO_ORIGINAL.git
+          git remote add upstream https://github.com/BookManagerOrganization/BookManagerAngularApp.git
           git fetch upstream
           git checkout main
           git merge upstream/main
